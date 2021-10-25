@@ -33,5 +33,4 @@ def combine(input_directory, save_directory):
 
 combine(input_directory, save_directory)
 
-#make video
-#ffmpeg -framerate 30 -i img%03d.png -c:v libx264 -pix_fmt yuv420p out.mp4
+
