@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 21 13:25:01 2020
-@author: craigposkanzer
-"""
+
 
 import os, time
 import numpy as np
