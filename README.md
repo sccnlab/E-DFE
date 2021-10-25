@@ -5,7 +5,7 @@
 * [Nest](https://github.com/ZhouYanzhao/Nest.git)
 * [Python=3.6.8](https://www.python.org)
 * [PyTorch=0.4.1](https://pytorch.org) (make sure to install with cuda and torchvision)
-* [Conda](https://www.anaconda.com/) (You could use Conda environment to install all prerequistes)
+* [Conda](https://www.anaconda.com/) (You could use Conda to install all prerequistes)
 * [MakeHuman](http://www.makehumancommunity.org/)
 * [FACSHuman](https://github.com/montybot/FACSHuman)
 * [FFmpeg](https://www.ffmpeg.org/)
