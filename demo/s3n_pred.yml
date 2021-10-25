@@ -22,7 +22,7 @@ data_loaders:
     - train
   test_splits:
     - test
-resume: "/home/wangccy/model_59.pt"
+resume: "./saved/model_59.pt"
 saved_path: "./output/pred.npy"
 log_path: './logs/s3n.log'
 model:
