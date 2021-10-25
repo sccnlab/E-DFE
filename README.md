@@ -22,7 +22,7 @@
     # Install Pytorch
     $ conda install pytorch=0.4.1 cuda90 -c pytorch
     $ conda install -c pytorch torchvision
-    # Install Progress bar
+    # Install progress bar
     $ conda install -c conda-forge tqdm
     # For the later nest command, replace nest with your_directory/anaconda3/envs/face/bin/nest
     
