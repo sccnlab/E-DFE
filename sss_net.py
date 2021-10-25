@@ -205,7 +205,7 @@ class S3N(nn.Module):
         
         xs = []
         xs_inv = []
-        xs_soft = [] #not sure if this is right too add yet
+        xs_soft = []
         for idx_i in range(N):
             if gate_score[idx_i] > -0.2:
                 decide_map = class_response_maps[idx_i, sort_number[idx_i, 0],:,:]
@@ -296,7 +296,7 @@ class S3N(nn.Module):
         agg_sampler1 = self.sampler_classifier1(self.avg(feature_C).view(-1, 2048))
         agg_sampler1 = torch.sigmoid(agg_sampler1)
         aggregation = self.con_classifier(torch.cat([self.avg(feature_raw).view(-1, 2048), self.avg(feature_D).view(-1, 2048), self.avg(feature_C).view(-1, 2048)], 1))
-        aggregation = torch.sigmoid(aggregation) #TEST
+        aggregation = torch.sigmoid(aggregation) 
         return aggregation, agg_origin, agg_sampler, agg_sampler1
 
 @register
