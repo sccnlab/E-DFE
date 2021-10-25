@@ -12,7 +12,7 @@
 
 ### Installation
 1. Install all the prerequisities
-   (Conda Version)
+   (Conda Version).
     ```bash
     # set up environment
     $ conda create --name face python=3.6.8
@@ -27,14 +27,14 @@
     # For the later nest command, replace nest with your_directory/anaconda3/envs/face/bin/nest
     
     ```
-3. Integrate FACSHuman with MakeHuman(follow the instruction: https://github.com/montybot/FACSHuman)
-4. Open MakeHuman and go to Settings/Plugins to enable scripting and shell (for generating facial expression animation)
+3. Integrate FACSHuman with MakeHuman(follow the instruction: https://github.com/montybot/FACSHuman).
+4. Open MakeHuman and go to Settings/Plugins to enable scripting and shell (for generating facial expression animation).
 
 ### Running our method
 
-1. `git clone https://github.com/sccnlab/Extracting-dynamic-facial-expressions-from-naturalistic-videos/ ./ExtractFace`
-2. `nest module install ./ExtractFace/ face`
-3.  Verify the installation `nest module list --filter face`
+1. `git clone https://github.com/sccnlab/Extracting-dynamic-facial-expressions-from-naturalistic-videos/ ./ExtractFace`.
+2. `nest module install ./ExtractFace/ face`.
+3.  Verify the installation `nest module list --filter face`.
 
 #### Data
 We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa/). Please download it from there if you want use the same data.
