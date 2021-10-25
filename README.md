@@ -24,7 +24,7 @@
     $ conda install -c pytorch torchvision
     # Install Progress bar
     $ conda install -c conda-forge tqdm
-    # For the later nest command, replace nest with your_directory/anaconda3/envs/s3n/bin/nest
+    # For the later nest command, replace nest with your_directory/anaconda3/envs/face/bin/nest
     
     ```
 3. Integrate FACSHuman with MakeHuman(follow the instruction: https://github.com/montybot/FACSHuman)
