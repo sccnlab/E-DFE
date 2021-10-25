@@ -19,7 +19,7 @@
 
 1. `git clone https://github.com/sccnlab/Extracting-dynamic-facial-expressions-from-naturalistic-videos/ ./ExtractFace`
 2. `nest module install ./ExtractFace/ face`
-3.  verify the installation `nest module list --filter face`
+3.  Verify the installation `nest module list --filter face`
 
 #### Data
 We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa/). Please download it from there if you want use the same data
