@@ -1,8 +1,8 @@
 import numpy as np
 import os
 from PIL import Image
-input_directory = "/Users/jeffwang/desktop/Testing_Face/"
-save_directory = "/Users/jeffwang/desktop/Combined_Face/"
+input_directory = "Your directory"
+save_directory = "Your directory"
 
 def get_concat_h(im1, im2):
     dst = Image.new('RGB', (im1.width + im2.width, im1.height))
