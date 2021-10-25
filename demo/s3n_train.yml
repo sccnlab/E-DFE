@@ -72,5 +72,5 @@ hooks:
           - 'test_branch4_top1: {metrics[test_top1][branch_3]:.2f}%'
     -
       _name: s3n.checkpoint
-      save_dir: '/home/wangccy/saved' 
+      save_dir: './saved/' 
       save_step: 1
