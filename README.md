@@ -30,13 +30,13 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 
 #### Testing
 1. Change the data_dir in /demo/s3n_test.yml to your data folder
-2. You can use our pretrained model
+2. You can use our pretrained model(https://drive.google.com/file/d/1lzeO-ozXTkm29Kbny_5pekHCPdYg2FgL/view?usp=sharing) and set resume /demo/s3n_test.yml to the pretrained model
 3. Run `CUDA_VISIBLE_DEVICES=0,1 nest task run ./demo/s3n_test.yml`
 
 #### Prediction
 1. Create you own facial expression video and run `ffmpeg -i your video name  -r 30 %06d.png` (remove all the blank frames)
 2. Change the data_dir in /demo/s3n_pred.yml to your data folder
-3. You can use our pretrained model
+3. You can use our pretrained model (same instruction above)
 4. Run `CUDA_VISIBLE_DEVICES=0,1 nest task run ./demo/s3n_pred.yml`
 5. The final output will save in ./output/pred.npy
 
