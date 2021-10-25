@@ -6,7 +6,7 @@ human = G.app.selectedHuman
 Base = "/Users/jeffwang/desktop/Testing_Face/"
 
 #load data
-data = np.load('/Users/jeffwang/desktop/Dynamic_Facial/pred_testing.npy')
+data = np.load('./output/pred.npy')
 # the set of action units
 action_units = [
 'Upper Face AUs/R43',
