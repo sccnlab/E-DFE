@@ -17,7 +17,7 @@
     # set up environment
     $ conda create --name face python=3.6.8
     $ conda activate face
-    # In Nest folder downloaded from https://github.com/ZhouYanzhao/Nest.git
+    # In the Nest folder downloaded from https://github.com/ZhouYanzhao/Nest.git
     $ python setup.py install
     # Install Pytorch
     $ conda install pytorch=0.4.1 cuda90 -c pytorch
