@@ -8,7 +8,7 @@
 * [Conda](https://www.anaconda.com/) (You could use Conda to install all prerequistes)
 * [MakeHuman](http://www.makehumancommunity.org/)
 * [FACSHuman](https://github.com/montybot/FACSHuman)
-* [FFmpeg](https://www.ffmpeg.org/)
+* [FFmpeg](https://www.ffmpeg.org/) (You could use conda install)
 
 ### Installation
 1. Install all the prerequisities
