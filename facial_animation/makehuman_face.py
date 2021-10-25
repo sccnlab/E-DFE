@@ -3,10 +3,10 @@ import os
 from core import G
 import getpath as gp
 human = G.app.selectedHuman
-Base = "/Users/jeffwang/desktop/Testing_Face/"
+Base = "Your directory"
 
 #load data
-data = np.load('./output/pred.npy')
+data = np.load('prediction file location')
 # the set of action units
 action_units = [
 'Upper Face AUs/R43',
