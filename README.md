@@ -46,3 +46,6 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 3. Copy the code to MakeHuman software /Utilities/Scripting and execute the code in /Utilities/Execute
 4. For better eyebrow animation, run /facial_animation/makehuman_face.py (Change the input_directory to your saved direction in makehuman_face.py, set your new custom saved directory, and remove .DS_Store if you have one)
 5. To generate the video, run `ffmpeg -framerate 30 -i img%03d.png -c:v libx264 -pix_fmt yuv420p out.mp4` in your final saved directory (you can set custom framerate)
+
+# Questions
+For any questions, please raise an issue on GitHub or email wangccy@bc.edu
