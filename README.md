@@ -12,7 +12,7 @@
 
 ### Installation
 1. Install all the prerequisities
-   Conda Version 
+   (Conda Version)
     ```bash
     # set up environment
     $ conda create --name face python=3.6.8
