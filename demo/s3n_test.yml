@@ -3,7 +3,7 @@ data_loaders:
   _name: s3n.fetch_data
   dataset: 
     _name: s3n.loadfeafa_test
-    data_dir: /home/wangccy/FEAFA2
+    data_dir: Your directory
   batch_size: 16
   num_workers: 0
   transform:
