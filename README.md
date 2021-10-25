@@ -12,8 +12,23 @@
 
 ### Installation
 1. Install all the prerequisities
-2. Integrate FACSHuman with MakeHuman(follow the instruction: https://github.com/montybot/FACSHuman)
-3. Open MakeHuman and go to Settings/Plugins to enable scripting and shell (for generating facial expression animation)
+   Conda Version 
+    ```bash
+    # set up environment
+    $ conda create --name face python=3.6.8
+    $ conda activate face
+    # In Nest folder downloaded from https://github.com/ZhouYanzhao/Nest.git
+    $ python setup.py install
+    # Install Pytorch
+    $ conda install pytorch=0.4.1 cuda90 -c pytorch
+    $ conda install -c pytorch torchvision
+    # Install Progress bar
+    $ conda install -c conda-forge tqdm
+    # For the later nest command, replace nest with your_directory/anaconda3/envs/s3n/bin/nest
+    
+    ```
+3. Integrate FACSHuman with MakeHuman(follow the instruction: https://github.com/montybot/FACSHuman)
+4. Open MakeHuman and go to Settings/Plugins to enable scripting and shell (for generating facial expression animation)
 
 ### Running our method
 
