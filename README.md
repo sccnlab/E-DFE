@@ -32,7 +32,7 @@
 
 ### Running our method
 
-1. `git clone https://github.com/sccnlab/Extracting-dynamic-facial-expressions-from-naturalistic-videos/ ./ExtractFace`.
+1. `git clone https://github.com/sccnlab/E-DFE/ ./ExtractFace`.
 2. `nest module install ./ExtractFace/ face`.
 3.  Verify the installation `nest module list --filter face`.
 
