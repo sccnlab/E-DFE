@@ -37,7 +37,7 @@
 3.  Verify the installation `nest module list --filter face`.
 
 #### Data
-We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa/). Please download it from there if you want use the same data.
+We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa/). Please download it from there if you want to use the same data.
 
 #### Training
 1. Change the data_dir in /demo/s3n_train.yml to your data folder.
