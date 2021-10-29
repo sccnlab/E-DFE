@@ -185,8 +185,9 @@ def network_pred(
                         pre.append(guesses)
                         
                 run_hooks('on_end_batch')
-
-   
+            
+            
+            #smoothe the prediction
             pred = torch.cat(pre, 0).detach().numpy()
             frames = pred.shape[0]
             splined_data = np.zeros([frames,pred.shape[1]])
