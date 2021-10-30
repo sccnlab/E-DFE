@@ -1,5 +1,5 @@
 <h2 align="center">Extracting Dynamic Facial Expressions from Naturalistic Videos</h2>
-
+![Illustration](sidebyside.png)
 ### Prerequisites 
 * CUDA (CPU for facial expression animation)
 * [Nest](https://github.com/ZhouYanzhao/Nest.git)
