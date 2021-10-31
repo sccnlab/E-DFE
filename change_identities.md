@@ -6,12 +6,12 @@
 4. Use the code below to set facial shape
    ```bash
    Face_modifier = human.getModifier(facial_dict)
-   Face_modifier.setValue(value)
+   Face_modifier.setValue(custom value from -1 to 1)
    human.applyAllTargets()
     ```
    You need to change back to original face shape before changing to the next one
    ```bash
-   Face_modifier = human.getModifier(item)
+   Face_modifier = human.getModifier(facial_dict)
    Face_modifier.setValue(0)
    human.applyAllTargets()
    ```
