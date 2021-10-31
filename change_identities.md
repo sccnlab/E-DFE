@@ -1,4 +1,4 @@
-## Change Identities (You can change facial identities in Makehuman manually)
+## Change Identities (You can change facial identities in MakeHuman manually)
 ### For changing skin, gender, race and facial shape in code, add those steps in makehuman_face.py (You need to add Geometries/Clothes, Geometries/Hair and Geometries/Teeth manually in Makehuman) before setting AUs
 1. Chose from the material_path and facial_dict (see facial_animation/categories.txt)
 2. Run test the features in material_path and facial_dict to pick the features you prefer
