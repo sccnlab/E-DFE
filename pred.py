@@ -195,7 +195,8 @@ def network_pred(
                 b = pred[:,i]
                 spline = scipy.signal.cspline1d(b, lamb=10)
                 splined_data[:,i]=spline
-                np.save(saved_path, splined_data)
+            os.makedirs(os.path.dirname(saved_path))
+            np.save(saved_path, splined_data)
             run_hooks('on_end_split')
 
     
