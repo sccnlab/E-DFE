@@ -22,6 +22,7 @@
     $ git clone https://github.com/ZhouYanzhao/Nest.git
     $ cd Nest
     $ python setup.py install
+    $ cd ..
     # Install Pytorch
     $ conda install pytorch=0.4.1 cuda90 -c pytorch
     $ conda install -c pytorch torchvision
@@ -35,7 +36,7 @@
 ### Running our method
 
 1. `git clone https://github.com/sccnlab/E-DFE/ ./ExtractFace`.
-2. `nest module install ./ExtractFace/ s3n`. 
+2. `nest module install ./ExtractFace/ s3n`. (there might be YAML version issues causing errors, refer here https://github.com/ZhouYanzhao/Nest/issues/4)
 3.  Verify the installation `nest module list --filter s3n`.
 4.  Install all the missed modules
 
