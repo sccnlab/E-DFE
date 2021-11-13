@@ -38,7 +38,7 @@
 1. `git clone https://github.com/sccnlab/E-DFE/ ./ExtractFace`.
 2. `nest module install ./ExtractFace/ face`. 
 3.  Verify the installation `nest module list --filter face`.
-4.  Install all the missed module
+4.  Install all the missed modules
 
 #### Data
 We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa/). Please download it from there if you want to use the same data.
