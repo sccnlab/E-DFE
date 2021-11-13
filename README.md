@@ -19,7 +19,8 @@
     # set up environment
     $ conda create --name face python=3.6.8
     $ conda activate face
-    # In the Nest folder downloaded from https://github.com/ZhouYanzhao/Nest.git
+    $ git clone https://github.com/ZhouYanzhao/Nest.git
+    $ cd Nest
     $ python setup.py install
     # Install Pytorch
     $ conda install pytorch=0.4.1 cuda90 -c pytorch
@@ -35,8 +36,8 @@
 ### Running our method
 
 1. `git clone https://github.com/sccnlab/E-DFE/ ./ExtractFace`.
-2. `nest module install ./ExtractFace/ face`.
-3.  Verify the installation `nest module list --filter face`.
+2. `nest module install ./ExtractFace/ face`. 
+4.  Verify the installation `nest module list --filter face`.
 
 #### Data
 We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa/). Please download it from there if you want to use the same data.
