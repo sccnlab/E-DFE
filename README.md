@@ -53,7 +53,7 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 3. Run `CUDA_VISIBLE_DEVICES=0,1 nest task run ./demo/s3n_test.yml`.
 
 #### Prediction
-1. Create you own facial expression video and run `ffmpeg -i your video name  -r 30 %06d.png` to generate frames (remove all the blank frames).
+1. Create you own facial expression video based on the action units referred in the paper and run `ffmpeg -i your video name  -r 30 %06d.png` to generate frames (remove all the blank frames).
 2. Change the data_dir in /demo/s3n_pred.yml to your data folder.
 3. You can use our pretrained model (same instruction above and set resume in /demo/s3n_pred.yml to the pretrained model).
 4. Run `CUDA_VISIBLE_DEVICES=0,1 nest task run ./demo/s3n_pred.yml`.
