@@ -185,7 +185,7 @@ def network_test(
                         guesses = ctx.output[0].cpu().detach()
                         pre.append(guesses)
                         answers = ctx.target.cpu().detach()
-                        results = abs(answers-guesses)
+                        results = abs(answers-guesses).numpy()
                         pos_answers = np.copy(answers)
                         pos_answers[pos_answers>0] = 1
                         total += pos_answers[pos_answers>0].sum()
