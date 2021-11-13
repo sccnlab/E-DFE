@@ -27,7 +27,6 @@
     $ conda install -c pytorch torchvision
     # Install progress bar
     $ conda install -c conda-forge tqdm
-    # For the later nest command, replace nest with your_directory/anaconda3/envs/face/bin/nest
     
     ```
 3. Integrate FACSHuman with MakeHuman(follow the instruction: https://github.com/montybot/FACSHuman).
@@ -36,8 +35,8 @@
 ### Running our method
 
 1. `git clone https://github.com/sccnlab/E-DFE/ ./ExtractFace`.
-2. `nest module install ./ExtractFace/ face`. 
-3.  Verify the installation `nest module list --filter face`.
+2. `nest module install ./ExtractFace/ s3n`. 
+3.  Verify the installation `nest module list --filter s3n`.
 4.  Install all the missed modules
 
 #### Data
