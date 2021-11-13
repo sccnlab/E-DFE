@@ -26,7 +26,10 @@ class Image_Dataset(Dataset):
         self.data = []
         self.transform = transform
     def get_train(self, img_dir):
-        pass         
+        folder = sorted(os.listdir(img_dir))
+        for i in range(0, len(folder)):
+            image_x = img_dir + folder[i]
+            self.data.append(image_x)         
 
     def get_test(self, img_dir):
         folder = sorted(os.listdir(img_dir))
