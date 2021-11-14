@@ -30,7 +30,8 @@ def combine(input_directory, save_directory):
         img_2_l, img_2_r = cut_image(img_2)
         get_concat_h(img_1_l, img_2_r).save(save_directory + "img" + str(i+1).zfill(len(str(len(image_dir)))) + ".png")
 
-
+if os.path.exists(save_directory) == False:
+    os.makedirs(os.path.dirname(save_directory))
 combine(input_directory, save_directory)
 
 
