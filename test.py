@@ -1,4 +1,5 @@
 import os
+import random
 import errno
 import logging
 from contextlib import contextmanager
@@ -45,7 +46,8 @@ def network_test(
     """
 
     torch.manual_seed(random_seed)
-
+    random.seed(random_seed)
+    np.random.seed(random_seed)
     logger = logging.getLogger('nest.network_trainer')
     logger.handlers = []
     logger.setLevel(logging.DEBUG)
@@ -76,6 +78,8 @@ def network_test(
     if device.type == 'cuda':
         assert torch.cuda.is_available(), 'CUDA is not available.'
         torch.backends.cudnn.benchmark = use_cudnn_benchmark
+        torch.backends.cudnn.deterministic = True
+        torch.cuda.manual_seed(random_seed)
 
     train_loaders, test_loaders = data_loaders
 
