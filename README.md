@@ -61,9 +61,9 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 
 ### Facial animation generation
 1. Change the base in facial_animation/makehuman_face.py to your directory you want to save.
-2. Make sure the directory in np.load is directing to the location of prediction file.
+2. Make sure the directory in np.load is directing to the location of pred.npy.
 3. In MakeHuman, go to Modeling/FACSHuman0.1 and set full face camera view
-4. Copy the code to MakeHuman software Utilities/Scripting. For changing the identities of facial animation, [refer here](change_identities.md)
+4. Copy the facial_animation/makehuman_face.py to MakeHuman software Utilities/Scripting. For changing the identities of facial animation, [refer here](change_identities.md)
 5. Execute the code in Utilities/Execute.
 6. For better eyebrow animation, run facial_animation/combine_face.py (change the input_directory to your saved direction in makehuman_face.py, set your new custom saved directory, and remove .DS_Store if you have one).
 7. To generate the video, run `ffmpeg -framerate 30 -i img%03d.png -c:v libx264 -pix_fmt yuv420p out.mp4` in your final saved directory (you can set custom framerate).
