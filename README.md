@@ -54,6 +54,7 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 1. Change the data_dir in /demo/s3n_test.yml to your data folder.
 2. You can use our pretrained model(https://drive.google.com/file/d/1lzeO-ozXTkm29Kbny_5pekHCPdYg2FgL/view?usp=sharing) and set resume in /demo/s3n_test.yml to the pretrained model.
 3. Run `CUDA_VISIBLE_DEVICES=0,1 nest task run ./demo/s3n_test.yml`.
+4. The code for baseline model we compared in our paper is vgg_baseline.py
 
 #### Prediction
 1. Create you own facial expression video based on the action units referred in the paper and run `ffmpeg -i your video name  -r 30 %06d.png` to generate frames (remove all the blank frames).
