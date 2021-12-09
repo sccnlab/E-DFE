@@ -2,6 +2,9 @@
 
 ![Illustration](sidebyside.png)
 
+### Introduction
+This codebase is to infer action units activations in human facial expression videos using deep learning technique and transfer the inferred activations to generate facial expression animations in different identities. For more details, refer to this paper https://doi.org/10.31234/osf.io/wsbdq
+
 ### Prerequisites 
 * CUDA (CPU for facial expression animation)
 * [Nest](https://github.com/ZhouYanzhao/Nest.git)
