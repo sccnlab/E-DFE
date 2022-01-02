@@ -54,7 +54,7 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 1. Change the data_dir in /demo/s3n_test.yml to your data folder.
 2. You can use our pretrained model(https://drive.google.com/file/d/1lzeO-ozXTkm29Kbny_5pekHCPdYg2FgL/view?usp=sharing) and set resume in /demo/s3n_test.yml to the pretrained model.
 3. Run `CUDA_VISIBLE_DEVICES=0,1 nest task run ./demo/s3n_test.yml`.
-4. The code for baseline model we compared in our paper is vgg_baseline.py
+4. The code for baseline model we compared in our paper is vgg_baseline.py.
 
 #### Prediction
 1. Create you own facial expression video based on the action units referred in the paper and run `ffmpeg -i your video name  -r 30 %06d.png` to generate frames (remove all the blank frames).
@@ -64,13 +64,13 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 5. The final output will save in ./output/pred.npy.
 
 ### Facial animation generation
-1. Change the base in facial_animation/makehuman_face.py to your directory you want to save.
-2. Make sure the directory in np.load is directing to the location of pred.npy.
-3. In MakeHuman, go to Modeling/FACSHuman0.1 and set full face camera view
-4. Copy the facial_animation/makehuman_face.py to MakeHuman software Utilities/Scripting. For changing the identities of facial animation, [refer here](change_identities.md)
-5. Execute the code in Utilities/Execute.
-6. For better eyebrow animation, run facial_animation/combine_face.py (change the input_directory to your saved direction in makehuman_face.py, set your new custom saved directory, and remove .DS_Store if you have one).
-7. To generate the video, run `ffmpeg -framerate 30 -i img%03d.png -c:v libx264 -pix_fmt yuv420p out.mp4` in your final saved directory (you can set custom framerate).
+1. Change the base in facial_animation/makehuman_face.py to your directory you want to save (output folder will have animated facial expression frame).
+2. Make sure the directory in np.load is directing to your location of pred.npy.
+3. In MakeHuman, go to Modeling/FACSHuman0.1 and set full face camera view.
+4. Copy the facial_animation/makehuman_face.py to MakeHuman software Utilities/Scripting. For changing the identities of facial animation, [refer here](change_identities.md). 
+5. Execute the code in Makehuman Utilities/Execute.
+6. For better eyebrow animation, run facial_animation/combine_face.py  `python combine_face.py --input {the base directory in step 1} --output {the output folder directory you want to save to}`.
+8. To generate the video, run `ffmpeg -framerate 30 -i img%03d.png -c:v libx264 -pix_fmt yuv420p out.mp4` in your final saved directory (you can set custom framerate).
 
 # Questions
 For any questions, please raise an issue on GitHub or email wangccy@bc.edu.
