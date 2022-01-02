@@ -5,6 +5,9 @@ import getpath as gp
 human = G.app.selectedHuman
 Base = "Your directory"
 
+if os.path.exists(Base) == False:
+    os.makedirs(Base)
+
 #load data
 data = np.load('prediction file location')
 # the set of action units
@@ -37,7 +40,7 @@ action_units = [
 
 for i in range(0, len(data)):
     #set value for different action units
-    directory = Base + "img_" + str(i) + '/'
+    directory = os.path.join(Base, "img_" + str(i))
     os.mkdir(directory)
     MHScript.setZoom(4.0)
     MHScript.setRotationZ(0)
@@ -54,7 +57,7 @@ for i in range(0, len(data)):
             AU_modifier.setValue(data[i][r])
             human.applyAllTargets()
     mh.redraw()
-    imgsavepath = (directory + "right" + ".png")
+    imgsavepath = os.path.join(directory, "right" + ".png")
     mh.grabScreen(G.windowWidth/2-120, G.windowHeight/2-140, 240, 240, imgsavepath)
     # set action units back
     for k in range(0, len(data[i])):
@@ -74,10 +77,11 @@ for i in range(0, len(data)):
             AU_modifier.setValue(data[i][l])
             human.applyAllTargets()
     mh.redraw()
-    imgsavepath = (directory + "left" + ".png")
+    imgsavepath = os.path.join(directory, "left" + ".png")
     mh.grabScreen(G.windowWidth/2-120, G.windowHeight/2-140, 240, 240, imgsavepath)
     # set action units back
     for k in range(0, len(data[i])):
         AU_modifier = human.getModifier(action_units[k])
         AU_modifier.setValue(0)
         human.applyAllTargets()
+
