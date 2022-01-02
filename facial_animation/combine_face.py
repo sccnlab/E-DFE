@@ -4,7 +4,7 @@ from PIL import Image
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--input", metavar='DIR', help="your prediction file location")
+parser.add_argument("--input", metavar='DIR', help="your input folder location")
 parser.add_argument("--output", metavar='DIR', help="output folder location")
 args = parser.parse_args()
 
