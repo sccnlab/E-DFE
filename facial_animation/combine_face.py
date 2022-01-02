@@ -1,8 +1,15 @@
 import numpy as np
 import os
 from PIL import Image
-input_directory = "Your directory"
-save_directory = "Your directory"
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input", metavar='DIR', help="your prediction file location")
+parser.add_argument("--output", metavar='DIR', help="output folder location")
+args = parser.parse_args()
+
+input_directory = args.input
+save_directory = args.output
 
 def get_concat_h(im1, im2):
     dst = Image.new('RGB', (im1.width + im2.width, im1.height))
@@ -21,17 +28,20 @@ def cut_image(img):
 
 
 def combine(input_directory, save_directory):
-    image_dir = sorted(os.listdir(input_directory),  key = lambda x: int(x.split('_')[1]))
+    input_d_l = os.listdir(input_directory)
+    if '.DS_Store' in input_d_l:
+        input_d_l.remove('.DS_Store')
+    image_dir = sorted(input_d_l,  key = lambda x: int(x.split('_')[1]))
     for i in range(0, len(image_dir)):
-        folder = sorted(os.listdir(input_directory + image_dir[i]))
-        img_1 = input_directory + image_dir[i] + '/' + folder[1]
-        img_2 = input_directory + image_dir[i] + '/' + folder[0]
+        folder = sorted(os.listdir(os.path.join(input_directory, image_dir[i])))
+        img_1 = os.path.join(input_directory, image_dir[i], folder[1])
+        img_2 = os.path.join(input_directory, image_dir[i], folder[0])
         img_1_l, img_1_r = cut_image(img_1)
         img_2_l, img_2_r = cut_image(img_2)
-        get_concat_h(img_1_l, img_2_r).save(save_directory + "img" + str(i+1).zfill(len(str(len(image_dir)))) + ".png")
+        get_concat_h(img_1_l, img_2_r).save(os.path.join(save_directory, "img" + str(i+1).zfill(len(str(len(image_dir)))) + ".png"))
+
 
 if os.path.exists(save_directory) == False:
-    os.makedirs(os.path.dirname(save_directory))
+    os.makedirs(save_directory)
 combine(input_directory, save_directory)
-
 
