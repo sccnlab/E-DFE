@@ -17,6 +17,7 @@ def get_concat_h(im1, im2):
     dst.paste(im2, (im1.width, 0))
     return dst
 
+# seperate the image to left half and right half
 def cut_image(img):
     im = Image.open(img)
     width, height = im.size
@@ -26,7 +27,7 @@ def cut_image(img):
     im_r = im.crop(right_half)
     return im_l, im_r
 
-
+# Combine left half and right half to one image
 def combine(input_directory, save_directory):
     input_d_l = os.listdir(input_directory)
     if '.DS_Store' in input_d_l:
