@@ -64,7 +64,7 @@ We use the facial expression data from FEAFA paper (https://www.iiplab.net/feafa
 5. The final output will save in ./output/pred.npy.
 
 ### Facial animation generation
-1. Change the base in facial_animation/makehuman_face.py to your directory you want to save (output folder will have animated facial expression frame).
+1. Change the base in facial_animation/makehuman_face.py to your directory you want to save (output folder will have animated facial expression frames).
 2. Make sure the directory in np.load is directing to your location of pred.npy.
 3. In MakeHuman, go to Modeling/FACSHuman0.1 and set full face camera view.
 4. Copy the facial_animation/makehuman_face.py to MakeHuman software Utilities/Scripting. For changing the identities of facial animation, [refer here](change_identities.md). 
