@@ -121,9 +121,7 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs):
                     outputs = model(inputs)
                     loss = criterion(outputs, labels)
 
-                    #_, preds = torch.max(outputs, 1)
 
-                    # backward + optimize only if in training phase
                     if phase == 'train':
                         loss.backward()
                         optimizer.step()
@@ -141,18 +139,12 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs):
                 best_loss = epoch_loss
                 best_model_wts = copy.deepcopy(model.state_dict())
                 torch.save(model.state_dict(), "Your directory")
-            #if phase == 'val':
-                #val_acc_history.append(epoch_acc)
 
-        #print()
 
     time_elapsed = time.time() - since
     print('Training complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
     print('Best val Acc: {:4f}'.format(best_loss))
 
-    # load best model weights
-#    model.load_state_dict(best_model_wts)
-#    return model, val_acc_history
 
 def test_model(model, dataloaders):
     test_loss = 0
@@ -173,8 +165,6 @@ def test_model(model, dataloaders):
             outputs = model(inputs)
             guesses = outputs.cpu().detach()
             answers = labels.cpu().detach()
-            #print("prediction is " + str(guesses.size()))
-            #print("answer is " + str(answers.size()))
             results = np.copy(abs(answers-guesses))
             pos_answers = np.copy(answers)
             pos_answers[pos_answers>0] = 1
@@ -225,7 +215,7 @@ def initialize_model(model_name, num_classes, feature_extract, use_pretrained=Fa
     if model_name == "vgg":
         model_ft = models.vgg16_bn(pretrained=use_pretrained)
         set_parameter_requires_grad(model_ft, feature_extract)
-        #num_ftrs = model_ft.classifier[6].in_features
+        # Change the classifer layer
         model_ft.classifier = nn.Sequential(
             nn.Linear(512 * 7 * 7, 1000, bias=True),
             nn.ReLU(True),
