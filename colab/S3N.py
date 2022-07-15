@@ -297,8 +297,8 @@ class S3N(nn.Module):
         aggregation = self.con_classifier(torch.cat([self.avg(feature_raw).view(-1, 2048), self.avg(feature_D).view(-1, 2048), self.avg(feature_C).view(-1, 2048)], 1))
         aggregation = torch.sigmoid(aggregation) 
         return aggregation, agg_origin, agg_sampler, agg_sampler1
-      
-  def s3n(
+    
+def s3n(
     mode: str ='resnet50',
     num_classes: int = 24,
     task_input_size: int = 448,
