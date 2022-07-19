@@ -267,12 +267,12 @@ class S3N(nn.Module):
         xs = torch.cat(xs, 0)
         xs_hm = nn.ReplicationPad2d(self.padding_size)(xs)
         grid = self.create_grid(xs_hm).to(input_x.device)
-        x_sampled_zoom = F.grid_sample(input_x, grid)
+        x_sampled_zoom = F.grid_sample(input_x, grid, align_corners=True)
        
         xs_inv = torch.cat(xs_inv, 0)
         xs_hm_inv = nn.ReplicationPad2d(self.padding_size)(xs_inv)
         grid_inv = self.create_grid(xs_hm_inv).to(input_x.device)
-        x_sampled_inv = F.grid_sample(input_x, grid_inv)
+        x_sampled_inv = F.grid_sample(input_x, grid_inv, align_corners=True)
 
         return x_sampled_zoom, x_sampled_inv
 
