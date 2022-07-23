@@ -5,6 +5,9 @@
 ### Introduction
 This codebase is to infer action units activations in human facial expression videos using deep learning technique and transfer the inferred activations to generate facial expression animations in different identities. For more details, refer to this paper https://doi.org/10.31234/osf.io/wsbdq
 
+### Colab Testing
+We have colab file (https://colab.research.google.com/drive/1jQ7vY6JVKskL_5uDr1t0UZoNI7cq8aKN#scrollTo=bv2US5cllJa7) for you to generate action units inference from your facial expression video. Make sure you upload our pretrained model weights (https://drive.google.com/file/d/1lzeO-ozXTkm29Kbny_5pekHCPdYg2FgL/view?usp=sharing) and your videos into your google drive before running colab.
+
 ### Prerequisites 
 * CUDA (CPU for facial expression animation)
 * [Nest](https://github.com/ZhouYanzhao/Nest.git)
