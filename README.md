@@ -9,7 +9,7 @@ This codebase is to infer action units activations in human facial expression vi
 For better quality, when you generate your videos, make sure follow the 24 action units mentioned in the paper, faces are not too far from camera and no blank frames (refer to our example).
 
 ### Colab Testing
-We have colab file (https://colab.research.google.com/drive/1jQ7vY6JVKskL_5uDr1t0UZoNI7cq8aKN#scrollTo=bv2US5cllJa7) for you to generate action units inference from your facial expression videos. You can then follow the instructions under Facial animation generation using the inference output. Make sure you upload our pretrained model weights (https://drive.google.com/file/d/1lzeO-ozXTkm29Kbny_5pekHCPdYg2FgL/view?usp=sharing) and your videos into your google drive before running the colab file.
+For those don't have computing resource, we have colab file (https://colab.research.google.com/drive/1jQ7vY6JVKskL_5uDr1t0UZoNI7cq8aKN#scrollTo=bv2US5cllJa7) for you to generate action units inference from your facial expression videos. You can then follow the instructions under Facial animation generation using the inference output. Make sure you upload our pretrained model weights (https://drive.google.com/file/d/1lzeO-ozXTkm29Kbny_5pekHCPdYg2FgL/view?usp=sharing) and your videos into your google drive before running the colab file.
 
 ### Prerequisites 
 * CUDA (CPU for facial expression animation)
