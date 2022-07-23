@@ -26,24 +26,24 @@ class Image_Dataset(Dataset):
     def get_train(self, img_dir):
         exp_folder = sorted(os.listdir(img_dir))
         for identity in range(1, 26, 2):
-            id_folder = sorted(os.listdir(img_dir + exp_folder[identity]))            
+            id_folder = sorted(os.listdir(os.path.join(img_dir, exp_folder[identity])))            
             for video in range(1,len(id_folder)-2):
-                video_folder = sorted(os.listdir(img_dir + exp_folder[identity] + '/' +  id_folder[video])) 
+                video_folder = sorted(os.listdir(os.path.join(img_dir, exp_folder[identity], id_folder[video]))) 
                 for frame in range(0,len(video_folder),2):
-                    image_x = img_dir + exp_folder[identity] + '/' + id_folder[video] +'/' + video_folder[frame +1]                      
-                    output_i = img_dir + exp_folder[identity] + '/' + id_folder[video] +'/' + video_folder[frame]                    
+                    image_x = os.path.join(img_dir, exp_folder[identity], id_folder[video], video_folder[frame +1])                      
+                    output_i = os.path.join(img_dir, exp_folder[identity], id_folder[video], video_folder[frame])                   
                     self.data.append((image_x, output_i))
             
 
     def get_test(self, img_dir):
         exp_folder = sorted(os.listdir(img_dir))
         for identity in range(1,len(exp_folder)-1,2):
-            id_folder = sorted(os.listdir(img_dir + exp_folder[identity]))
+            id_folder = sorted(os.listdir(os.path.join(img_dir, exp_folder[identity]))) 
             for video in range(len(id_folder)-2, len(id_folder)):
-                video_folder = sorted(os.listdir(img_dir + exp_folder[identity] + '/' + id_folder[video])) 
+                video_folder = sorted(os.listdir(os.path.join(img_dir, exp_folder[identity], id_folder[video])))
                 for frame in range(0,len(video_folder),2):
-                    image_x = img_dir + exp_folder[identity] + '/' + id_folder[video] +'/' + video_folder[frame +1]                      
-                    output_i = img_dir + exp_folder[identity] + '/' + id_folder[video] +'/' + video_folder[frame]                   
+                    image_x = os.path.join(img_dir, exp_folder[identity], id_folder[video], video_folder[frame +1])                       
+                    output_i = os.path.join(img_dir, exp_folder[identity], id_folder[video], video_folder[frame])                  
                     self.data.append((image_x, output_i))
 
              
