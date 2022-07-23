@@ -28,13 +28,13 @@ class Image_Dataset(Dataset):
     def get_train(self, img_dir):
         folder = sorted(os.listdir(img_dir))
         for i in range(0, len(folder)):
-            image_x = img_dir + folder[i]
+            image_x = os.path.join(img_dir, folder[i])
             self.data.append(image_x)         
 
     def get_test(self, img_dir):
         folder = sorted(os.listdir(img_dir))
         for i in range(0, len(folder)):
-            image_x = img_dir + folder[i]
+            image_x = os.path.join(img_dir, folder[i])
             self.data.append(image_x)
                 
     def __len__(self):
