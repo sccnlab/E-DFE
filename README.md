@@ -17,7 +17,7 @@ For those don't have computing resources, we have colab file (https://colab.rese
 * CUDA 9 or 10 (CPU for facial expression animation)
 * [Nest](https://github.com/ZhouYanzhao/Nest.git)
 * [Python=3.6.8](https://www.python.org)
-* [PyTorch < 1.7.0](https://pytorch.org/get-started/previous-versions/) (make sure to install with cuda and torchvision)
+* [PyTorch \leq 1.0.0](https://pytorch.org/get-started/previous-versions/) (make sure to install with cuda and torchvision)
 * [Conda](https://www.anaconda.com/) (You could use Conda to install all prerequistes)
 * [MakeHuman](http://www.makehumancommunity.org/)
 * [FACSHuman](https://github.com/montybot/FACSHuman)
