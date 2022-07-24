@@ -34,10 +34,10 @@ For those don't have computing resources, we have colab file (https://colab.rese
     $ cd Nest
     $ python setup.py install
     $ cd ..
-    # Depending on your cuda version. Either Install Pytorch cuda 9
+    # Depending on your cuda version. Either Install Pytorch 0.4.1 cuda 9
     $ conda install pytorch=0.4.1 cuda90 -c pytorch
     $ conda install -c pytorch torchvision
-    # Or Install Pytorch cuda 10
+    # Or Install Pytorch 1.0.0 cuda 10
     $ conda install pytorch==1.0.0 torchvision==0.2.1 cuda100 -c pytorch
     # Install progress bar
     $ conda install -c conda-forge tqdm
