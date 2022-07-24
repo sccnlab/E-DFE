@@ -39,6 +39,8 @@ For those don't have computing resources, we have colab file (https://colab.rese
     $ conda install -c pytorch torchvision
     # Install progress bar
     $ conda install -c conda-forge tqdm
+    # Install Scikit Image
+    $ conda install -c anaconda scikit-image
     
     ```
 3. Integrate FACSHuman with MakeHuman(follow the instruction: https://github.com/montybot/FACSHuman).
