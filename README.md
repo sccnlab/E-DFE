@@ -14,10 +14,10 @@ Our method takes input as frames. You need to run `ffmpeg -i your video name  -r
 For those don't have computing resources, we have colab file (https://colab.research.google.com/drive/1jQ7vY6JVKskL_5uDr1t0UZoNI7cq8aKN#scrollTo=bv2US5cllJa7) for you to generate action units inference from your facial expression videos. You can then follow the instructions under Facial animation generation using the inference output. Make sure you upload our pretrained model weights (https://drive.google.com/file/d/1lzeO-ozXTkm29Kbny_5pekHCPdYg2FgL/view?usp=sharing) and your video frames folder into your google drive before running the colab file.
 
 ### Prerequisites 
-* CUDA (CPU for facial expression animation)
+* CUDA 9 or 10 (CPU for facial expression animation)
 * [Nest](https://github.com/ZhouYanzhao/Nest.git)
 * [Python=3.6.8](https://www.python.org)
-* [PyTorch=0.4.1](https://pytorch.org) (make sure to install with cuda and torchvision)
+* [PyTorch < 1.7.0](https://pytorch.org/get-started/previous-versions/) (make sure to install with cuda and torchvision)
 * [Conda](https://www.anaconda.com/) (You could use Conda to install all prerequistes)
 * [MakeHuman](http://www.makehumancommunity.org/)
 * [FACSHuman](https://github.com/montybot/FACSHuman)
